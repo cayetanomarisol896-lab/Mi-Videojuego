@@ -1,0 +1,41 @@
+:root{--bd:#1c2f7a;--gr:#4cc23a;--gd:#2c8a20;--pn:#dfe9ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+[hidden]{display:none!important}
+html,body{height:100%;margin:0;background:#0b1030;font-family:'Lilita One','Arial Black',sans-serif;color:#fff;overflow:hidden}
+#app{position:relative;max-width:480px;height:100%;margin:0 auto;overflow:hidden;background:#123}
+#hud{position:absolute;top:8px;left:8px;right:8px;display:flex;gap:8px;z-index:5}
+.pill{background:rgba(10,20,60,.78);border:2px solid #8fb2ff;border-radius:20px;padding:3px 12px;font-size:19px}
+#home{position:absolute;inset:0;background:center/cover;display:flex;flex-direction:column;align-items:center}
+#home:before{content:"";position:absolute;inset:0;background:linear-gradient(#0008,#0003 40%,#000a)}
+#home>*{position:relative}
+#logo{width:150px;margin-top:52px;border-radius:50%;box-shadow:0 0 30px #4df}
+#best{margin-top:8px;background:rgba(10,20,60,.75);border:2px solid #8fb2ff;border-radius:14px;padding:4px 18px;font-size:20px;text-align:center}
+#hchar{height:38%;margin-top:8px;filter:drop-shadow(0 12px 12px #000a);animation:bob 2s infinite ease-in-out;cursor:pointer}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.btn{border:0;border-bottom:5px solid var(--gd);background:linear-gradient(#7be35f,var(--gr));color:#fff;font:inherit;font-size:21px;padding:8px 20px;border-radius:14px;text-shadow:0 2px 0 #1a5a12;cursor:pointer}
+.btn:disabled{filter:grayscale(1);opacity:.55}
+.play{font-size:28px;margin-top:auto;margin-bottom:104px;animation:bob 1.2s infinite}
+nav{position:absolute!important;left:8px;right:8px;bottom:12px;display:flex;gap:8px}
+nav button{flex:1;position:relative;background:linear-gradient(#5f8fff,#2f4fb5);border:3px solid #1c2f7a;border-radius:14px;color:#fff;font:inherit;font-size:13px;padding:8px 2px;cursor:pointer}
+nav b{display:block;font-size:26px;font-weight:400}
+nav i{position:absolute;top:-8px;right:-4px;background:#e23b3b;border:2px solid #fff;border-radius:50%;min-width:22px;font-style:normal;font-size:14px}
+#modal{position:absolute;inset:0;z-index:20;background:#0006}
+.win{position:absolute;inset:56px 10px 12px;background:linear-gradient(#6b98ff,#3a5fc9);border:4px solid var(--bd);border-radius:18px;display:flex;flex-direction:column;box-shadow:0 10px 40px #000a;animation:pop .25s}
+.win h2{margin:0;padding:10px;background:linear-gradient(#e8f0ff,#b9cfff);color:var(--bd);border-radius:13px 13px 0 0;font-size:26px;text-align:center;font-weight:400}
+.x{position:absolute;right:-10px;top:-16px;width:44px;height:44px;border-radius:50%;background:radial-gradient(#ff7b7b,#c62020);border:3px solid #fff;color:#fff;font:inherit;font-size:24px;cursor:pointer;z-index:2}
+.body{flex:1;overflow:auto;padding:12px}
+.card{background:var(--pn);color:var(--bd);border-radius:14px;padding:10px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.bar{height:16px;background:var(--bd);border-radius:9px;overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;background:linear-gradient(#ffe36b,#ffa600)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.lb{aspect-ratio:1;border-radius:14px;border:3px solid var(--bd);background:linear-gradient(#fff,#b9cfff);color:var(--bd);font:inherit;font-size:28px;cursor:pointer}
+.lb:disabled{background:#6b7aa8;color:#ccd;font-size:22px}
+.big{text-align:center;font-size:20px}.big b{font-size:34px;display:block}
+input{font:inherit;font-size:22px;border-radius:10px;border:3px solid var(--bd);padding:4px 10px;width:100%;color:var(--bd)}
+#game{position:absolute;inset:0;background:#000}
+#cv{width:100%;height:100%;object-fit:contain;touch-action:none;display:block}
+#gh{position:absolute;top:8px;left:8px;right:8px;display:flex;gap:8px;align-items:center;pointer-events:none}
+#gh .bar{flex:1;height:14px;border:2px solid #fff}
+.sn{font:inherit;cursor:pointer;color:#fff}
+#gh button{pointer-events:auto;background:#0009;border:2px solid #fff;border-radius:10px;color:#fff;font-size:20px;cursor:pointer}
